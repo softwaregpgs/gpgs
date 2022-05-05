@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginClienteComponent implements OnInit {
 
-  constructor() { }
+  hide = true;
+
+  constructor() {
+   
+   }
 
   ngOnInit(): void {
+
+
   }
+
+
 
 }

@@ -1,1 +1,22 @@
-<p>login-cliente works!</p>
+<h1>Iniciar sesión</h1>
+
+
+<mat-form-field appearance="outline">
+    <mat-label>Usuario</mat-label>
+    <input matInput>
+</mat-form-field>
+<mat-form-field appearance="outline">
+    <mat-label>Contraseña</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+</mat-form-field>
+<div class="buttons">
+    <button class="btnIniciar" mat-raised-button>Iniciar sesión</button>
+    <button class="btnRegistrar" mat-button [matMenuTriggerFor]="menu">Registrarse</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Como cliente</button>
+        <button mat-menu-item>Como empresa</button>
+    </mat-menu>
+</div>

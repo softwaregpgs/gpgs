@@ -60,3 +60,7 @@ a {
         visibility: hidden;
     }
 }
+
+app-login-cliente {
+    width: 100%;
+}
