@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-login-cliente',
-  templateUrl: './login-cliente.component.html',
-  styleUrls: ['./login-cliente.component.css']
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class LoginClienteComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   hide = true;
 

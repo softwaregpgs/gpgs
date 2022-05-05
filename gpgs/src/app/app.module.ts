@@ -8,8 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import  {MatIconModule} from '@angular/material/icon';
 import  {FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-import { LoginEmpresaComponent } from './login-empresa/login-empresa.component';
-import { LoginClienteComponent } from './login-cliente/login-cliente.component';
+import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,8 +19,7 @@ import { MatMenuModule } from '@angular/material/menu';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    LoginEmpresaComponent,
-    LoginClienteComponent,
+    LoginComponent,
     FooterComponent
   ],
   imports: [
@@ -33,7 +31,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatInputModule,
     MatMenuModule,
     RouterModule.forRoot([
-      { path: 'login', component: LoginClienteComponent },
+      { path: 'login', component: LoginComponent },
     ])
   ],
   providers: [],
