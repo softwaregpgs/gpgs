@@ -11,10 +11,11 @@
     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
+    <mat-hint align="end"><a href="contraseña">¿Has olvidado tu contraseña?</a></mat-hint>
 </mat-form-field>
 <div class="buttons">
     <button class="btnIniciar" mat-raised-button>Iniciar sesión</button>
-    <button class="btnRegistrar" mat-button [matMenuTriggerFor]="menu">Registrarse</button>
+    <button class="btnRegistrar" mat-button [matMenuTriggerFor]="menu">Crear cuenta</button>
     <mat-menu #menu="matMenu">
         <button mat-menu-item>Como cliente</button>
         <button mat-menu-item>Como empresa</button>

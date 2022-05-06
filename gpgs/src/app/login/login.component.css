@@ -34,3 +34,17 @@ h1 {
         width: 100px;
     }
 }
+
+a {
+    text-decoration: none;
+    text-transform: none;
+    color: rgb(29, 191, 212);
+}
+
+a:hover {
+    color: black;
+}
+
+button:hover {
+    color: white;
+}

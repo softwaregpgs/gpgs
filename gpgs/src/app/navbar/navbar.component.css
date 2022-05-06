@@ -48,3 +48,9 @@
 .logo-link :active {
     color: rgb(29, 191, 212);
 }
+
+.btnIniciar {
+    background-color: white;
+    color: rgb(29, 191, 212);
+    margin: 0 16px;
+}
