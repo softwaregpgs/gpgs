@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroEmpresaComponent implements OnInit {
 
+  hide = true;
+  
   constructor() { }
 
   ngOnInit(): void {

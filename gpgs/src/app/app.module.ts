@@ -36,6 +36,9 @@ import { RegistroClienteComponent } from './registro-cliente/registro-cliente.co
     MatMenuModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
+      { path: 'registroEmpresa', component: RegistroEmpresaComponent },
+      { path: 'registroCliente', component: RegistroClienteComponent },
+      { path: 'home', component: HomeComponent },
     ])
   ],
   providers: [],
