@@ -13,6 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { RegistroEmpresaComponent } from './registro-empresa/registro-empresa.component';
+import { RegistroClienteComponent } from './registro-cliente/registro-cliente.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { MatMenuModule } from '@angular/material/menu';
     NavbarComponent,
     HomeComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
+    RegistroEmpresaComponent,
+    RegistroClienteComponent
   ],
   imports: [
     BrowserModule,
