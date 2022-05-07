@@ -15,6 +15,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { RegistroEmpresaComponent } from './registro-empresa/registro-empresa.component';
 import { RegistroClienteComponent } from './registro-cliente/registro-cliente.component';
+import { HomeClienteComponent } from './home-cliente/home-cliente.component';
+import { HomeEmpresaComponent } from './home-empresa/home-empresa.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { RegistroClienteComponent } from './registro-cliente/registro-cliente.co
     LoginComponent,
     FooterComponent,
     RegistroEmpresaComponent,
-    RegistroClienteComponent
+    RegistroClienteComponent,
+    HomeClienteComponent,
+    HomeEmpresaComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +42,8 @@ import { RegistroClienteComponent } from './registro-cliente/registro-cliente.co
       { path: 'login', component: LoginComponent },
       { path: 'login/registroEmpresa', component: RegistroEmpresaComponent },
       { path: 'login/registroCliente', component: RegistroClienteComponent },
+      { path: 'login/registroCliente/homeCliente', component: HomeClienteComponent },
+      { path: 'login/registroEmpresa/homeEmpresa', component: HomeEmpresaComponent },
       { path: '', component: HomeComponent },
     ])
   ],
