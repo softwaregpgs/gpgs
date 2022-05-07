@@ -46,6 +46,7 @@ a:hover {
     color: black;
 }
 
-button:hover {
+.btnIniciar:hover,
+.btnRegistrar:hover {
     color: white;
 }
