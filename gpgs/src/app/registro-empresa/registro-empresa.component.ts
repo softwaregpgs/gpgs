@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators } from '@angular/forms';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registro-empresa',
@@ -15,7 +16,7 @@ export class RegistroEmpresaComponent implements OnInit {
 
   hide = true;
   
-  constructor(private fb: FormBuilder, private _snackBar:MatSnackBar) {
+  constructor(private fb: FormBuilder, private _snackBar:MatSnackBar,private router: Router) {
     this.form = this.fb.group({
       email:['', Validators.required],
       password:['', Validators.required],
@@ -49,8 +50,8 @@ this.form.reset();
   fakeLoading(){
     this.loading = true;
     setTimeout(()=>{
-      //Redireccionar
-this.loading = false;
+      this.router.navigateByUrl("/login/registroEmpresa/homeEmpresa")
+      this.loading = false;
     }, 1500);
   }
   

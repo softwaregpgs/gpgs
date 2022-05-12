@@ -8,6 +8,11 @@
     margin-top: 40px;
 }
 
+.empresa {
+    display: flex;
+    flex-direction: row;
+}
+
 .btnRegistrarse {
     background-color: rgb(29, 191, 212);
     margin-left: 70px;
@@ -46,6 +51,6 @@ button:hover {
     color: white;
 }
 
-.spinner{
+.spinner {
     margin: 0 auto;
 }
