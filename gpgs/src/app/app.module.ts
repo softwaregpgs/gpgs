@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -13,10 +13,17 @@ import { FooterComponent } from './footer/footer.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
 import { RegistroEmpresaComponent } from './registro-empresa/registro-empresa.component';
 import { RegistroClienteComponent } from './registro-cliente/registro-cliente.component';
 import { HomeClienteComponent } from './home-cliente/home-cliente.component';
 import { HomeEmpresaComponent } from './home-empresa/home-empresa.component';
+import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-privacidad.component';
+import {FormControl, Validators} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -28,7 +35,14 @@ import { HomeEmpresaComponent } from './home-empresa/home-empresa.component';
     RegistroEmpresaComponent,
     RegistroClienteComponent,
     HomeClienteComponent,
-    HomeEmpresaComponent
+    HomeEmpresaComponent,
+    PoliticaPrivacidadComponent,
+    FormControl,
+    Validators,
+    ReactiveFormsModule,
+    FormBuilder,
+    MatSnackBarModule,
+    MatProgressSpinnerModule
   ],
   imports: [
     BrowserModule,
@@ -38,6 +52,7 @@ import { HomeEmpresaComponent } from './home-empresa/home-empresa.component';
     MatButtonModule,
     MatInputModule,
     MatMenuModule,
+    MatListModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
       { path: 'login/registroEmpresa', component: RegistroEmpresaComponent },
@@ -45,10 +60,14 @@ import { HomeEmpresaComponent } from './home-empresa/home-empresa.component';
       { path: 'login/registroCliente/homeCliente', component: HomeClienteComponent },
       { path: 'login/registroEmpresa/homeEmpresa', component: HomeEmpresaComponent },
       { path: '', component: HomeComponent },
+      { path: 'politicaPrivacidad', component: PoliticaPrivacidadComponent },
     ])
   ],
   providers: [],
   bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   
 })
 export class AppModule { }

@@ -45,3 +45,7 @@ a:hover {
 button:hover {
     color: white;
 }
+
+.spinner{
+    margin: 0 auto;
+}
