@@ -1,52 +1,52 @@
 <h1>Registro Empresa</h1>
 <mat-spinner *ngIf="loading" class="spinner" diameter="50"></mat-spinner>
 <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
-<mat-form-field appearance="outline">
-    <mat-label>Empresa</mat-label>
-    <input matInput>
-</mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Empresa</mat-label>
+        <input matInput>
+    </mat-form-field>
 
-<mat-form-field appearance="outline">
-    <mat-label>CIF</mat-label>
-    <input matInput>
-</mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>CIF</mat-label>
+        <input matInput>
+    </mat-form-field>
 
-<mat-form-field appearance="outline">
-    <mat-label>Teléfono</mat-label>
-    <input matInput>
-</mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Teléfono</mat-label>
+        <input matInput>
+    </mat-form-field>
 
-<mat-form-field appearance="outline">
-    <mat-label>Dirección</mat-label>
-    <input matInput>
-</mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Dirección</mat-label>
+        <input matInput>
+    </mat-form-field>
 
-<mat-form-field appearance="outline">
-    <mat-label>Categoría</mat-label>
-    <input matInput>
-</mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Categoría</mat-label>
+        <input matInput>
+    </mat-form-field>
 
-<mat-form-field appearance="outline">
-    <mat-label>WEB</mat-label>
-    <input matInput>
-</mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>WEB</mat-label>
+        <input matInput>
+    </mat-form-field>
 
-<mat-form-field appearance="outline">
-    <mat-label>Email</mat-label>
-    <input matInput formControlName="email">
-</mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+    </mat-form-field>
 
-<mat-form-field appearance="outline">
-    <mat-label>Contraseña</mat-label>
-    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
-    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
-</mat-form-field>
+    </mat-form-field>
 
-<div class="buttons">
-    <button type="submit" class="btnRegistrarse" mat-raised-button [routerLink]="['homeEmpresa']">Registrarse</button>
-    <!-- <button type="submit" class="btnRegistrarse" mat-raised-button [disabled]="form.disabled">Registrarse</button> -->
-</div>
+    <div class="buttons">
+        <button type="submit" class="btnRegistrarse" mat-raised-button [routerLink]="['homeEmpresa']">Registrarse</button>
+        <!-- <button type="submit" class="btnRegistrarse" mat-raised-button [disabled]="form.disabled">Registrarse</button> -->
+    </div>
 
 </form>

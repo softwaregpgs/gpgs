@@ -5,8 +5,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
-import  {MatIconModule} from '@angular/material/icon';
-import  {FormsModule} from '@angular/forms';
+import {MatIconModule} from '@angular/material/icon';
+import {FormsModule} from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
@@ -19,9 +19,7 @@ import { RegistroClienteComponent } from './registro-cliente/registro-cliente.co
 import { HomeClienteComponent } from './home-cliente/home-cliente.component';
 import { HomeEmpresaComponent } from './home-empresa/home-empresa.component';
 import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-privacidad.component';
-import {FormControl, Validators} from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FormBuilder } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
@@ -37,12 +35,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     HomeClienteComponent,
     HomeEmpresaComponent,
     PoliticaPrivacidadComponent,
-    FormControl,
-    Validators,
-    ReactiveFormsModule,
-    FormBuilder,
-    MatSnackBarModule,
-    MatProgressSpinnerModule
+  
   ],
   imports: [
     BrowserModule,
@@ -53,6 +46,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatInputModule,
     MatMenuModule,
     MatListModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
       { path: 'login/registroEmpresa', component: RegistroEmpresaComponent },
