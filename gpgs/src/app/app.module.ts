@@ -22,6 +22,7 @@ import { PoliticaPrivacidadComponent } from './politica-privacidad/politica-priv
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     ReactiveFormsModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
+    HttpClientModule,
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },
       { path: 'login/registroEmpresa', component: RegistroEmpresaComponent },

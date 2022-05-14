@@ -3,6 +3,8 @@ import { Validators } from '@angular/forms';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { Empresa } from '../model/empresa';
+import { EmpresaService } from '../services/empresa.service';
 
 @Component({
   selector: 'app-registro-empresa',
@@ -16,7 +18,7 @@ export class RegistroEmpresaComponent implements OnInit {
 
   hide = true;
   
-  constructor(private fb: FormBuilder, private _snackBar:MatSnackBar,private router: Router) {
+  constructor(private fb: FormBuilder, private _snackBar:MatSnackBar,private router: Router, private empresaService: EmpresaService) {
     this.form = this.fb.group({
       email:['', Validators.required],
       password:['', Validators.required],
@@ -53,6 +55,15 @@ this.form.reset();
       this.router.navigateByUrl("/login/registroEmpresa/homeEmpresa")
       this.loading = false;
     }, 1500);
+  }
+
+  add(email:string, cif:string, nombre:string, descripcion:string, telefono:string, direccion:string, enlaceWeb:string): void {
+    // nombre = nombre.trim();
+    // if (!nombre) { return; }
+    this.empresaService.addEmpresa({ email, cif, nombre, descripcion, telefono, direccion, enlaceWeb } as Empresa)
+      .subscribe(empresa => {
+        console.log(empresa);
+      });
   }
   
 
