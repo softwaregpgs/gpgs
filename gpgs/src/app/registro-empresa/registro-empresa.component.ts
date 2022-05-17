@@ -20,8 +20,15 @@ export class RegistroEmpresaComponent implements OnInit {
   
   constructor(private fb: FormBuilder, private _snackBar:MatSnackBar,private router: Router, private empresaService: EmpresaService) {
     this.form = this.fb.group({
-      email:['', Validators.required],
+      nombre:['', Validators.required],
       password:['', Validators.required],
+      telefono:['', Validators.required],
+      direccion:['', Validators.required],
+      descripcion:['', Validators.required],
+      enlaceWeb:['', Validators.required],
+      email:['', Validators.required],
+      cif:['', Validators.required],
+  
     })
    }
 
