@@ -22,6 +22,12 @@ export class RegistroEmpresaComponent implements OnInit {
     this.form = this.fb.group({
       email:['', Validators.required],
       password:['', Validators.required],
+      direccion:['', Validators.required],
+      descripcion:['', Validators.required],
+      enlaceWeb:['', Validators.required],
+      nombre:['', Validators.required],
+      cif:['', Validators.required],
+      telefono:['', Validators.required],
     })
    }
 
