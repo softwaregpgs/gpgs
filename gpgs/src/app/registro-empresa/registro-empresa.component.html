@@ -7,39 +7,39 @@
     <div class="empresa">
         <mat-form-field appearance="outline">
             <mat-label>Empresa</mat-label>
-            <input matInput formControlName="nombre" #nombre>
+            <input matInput formControlName="nombre">
         </mat-form-field>
 
         <mat-form-field appearance="outline">
             <mat-label>CIF</mat-label>
-            <input matInput formControlName="cif" #cif>
+            <input matInput formControlName="cif">
         </mat-form-field>
     </div>
     <mat-form-field appearance="outline">
         <mat-label>Teléfono</mat-label>
-        <input matInput formControlName="telefono" #telefono>
+        <input matInput formControlName="telefono">
     </mat-form-field>
 
     <mat-form-field appearance="outline">
         <mat-label>Dirección</mat-label>
-        <input matInput formControlName="direccion" #direccion>
+        <input matInput formControlName="direccion">
     </mat-form-field>
 
     <mat-form-field appearance="outline">
         <mat-label>Categoría</mat-label>
-        <input matInput formControlName="descripcion" #descripcion>
+        <input matInput formControlName="descripcion">
     </mat-form-field>
 
     <mat-form-field appearance="outline">
         <mat-label>WEB</mat-label>
-        <input matInput formControlName="enlaceWeb" #enlaceWeb>
+        <input matInput formControlName="enlaceWeb">
     </mat-form-field>
 
     <input type="file" formControlName="fotos" class="file-input" multiple (change)="selectFiles($event)">
 
     <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
-        <input matInput formControlName="email" #email>
+        <input matInput formControlName="email">
     </mat-form-field>
 
     <mat-form-field appearance="outline">
@@ -52,7 +52,6 @@
 
     <div class="buttons">
         <button type="submit" class="btnRegistrarse" mat-raised-button type="submit">Registrarse</button>
-        <!-- <button type="submit" class="btnRegistrarse" mat-raised-button [disabled]="form.disabled">Registrarse</button> -->
     </div>
 
 </form>

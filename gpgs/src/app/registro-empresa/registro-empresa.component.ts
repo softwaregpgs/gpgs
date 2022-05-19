@@ -20,6 +20,9 @@ export class RegistroEmpresaComponent implements OnInit {
 
   //Lista de fotos seleccionadas
   fileList!: FileList;
+
+  //Lista de categorías
+  categorias = ["Fontanería", "Electricidad", "Construcción", "Agricultura", "Jardinería"]
   
   
   constructor(private fb: FormBuilder, private _snackBar:MatSnackBar,private router: Router, private empresaService: EmpresaService) {
@@ -32,28 +35,12 @@ export class RegistroEmpresaComponent implements OnInit {
       enlaceWeb:['', Validators.required],
       email:['', Validators.required],
       cif:['', Validators.required],
-      fotos:[[]]
+      fotos:[[], Validators.required]
     })
    }
 
   ngOnInit(): void {
   }
-
-  ingresar(){
-  /*   console.log(this.form);
-    const email = this.form.value.email;
-    const password = this.form.value.password;
-
-    if(email == 'borja' && password == 'gpgs'){
-this.fakeLoading();
-    }else{
-this.error();
-this.form.reset();
-    } */
-  }
-
-
-
 
   error(){
     this._snackBar.open('Email o contraseña son inválidos','',{
@@ -63,7 +50,11 @@ this.form.reset();
     })
   }
 
-
+  /**
+   * 
+   * Método que simula la carga de la página y redirige al home de Empresa
+   * 
+   */
   fakeLoading(){
     this.loading = true;
     setTimeout(()=>{
@@ -85,10 +76,12 @@ this.form.reset();
 
     this.empresaService.addEmpresa(data as Empresa)
       .subscribe(empresa => {
-        console.log(empresa);
+        this.fakeLoading();
       });
+
   }
   
+  /************************* FILES ******************************/
 
   /**
    * 
@@ -99,8 +92,12 @@ this.form.reset();
    */
   getFiles(){
     var files = []
-    files.push(this.fileList[0].name)
-    files.push(this.fileList[1].name)
+
+    for(var i=0; i< this.fileList.length;i++){
+
+      files.push(this.fileList[i].name)
+
+    }
 
     return files
 

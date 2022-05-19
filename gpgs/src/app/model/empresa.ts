@@ -1,4 +1,8 @@
-
+/**
+ *  
+ * Interfaz Empresa
+ * 
+ */
 export interface Empresa{
     email:string;
     cif:string;
