@@ -35,7 +35,8 @@ export class RegistroEmpresaComponent implements OnInit {
       enlaceWeb:['', Validators.required],
       email:['', Validators.required],
       cif:['', Validators.required],
-      fotos:[[], Validators.required]
+      fotos:[[], Validators.required],
+      categorias: ['', Validators.required]
     })
    }
 

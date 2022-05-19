@@ -26,7 +26,7 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-        <mat-label>Categoría</mat-label>
+        <mat-label>Descripción</mat-label>
         <input matInput formControlName="descripcion">
     </mat-form-field>
 
@@ -37,6 +37,18 @@
 
     <input type="file" formControlName="fotos" class="file-input" multiple (change)="selectFiles($event)">
 
+
+    <span>
+    <p>Tipo de servicio que ofrece tu empresa</p>
+
+    <ul>
+        <li *ngFor="let categoria of categorias">
+            <mat-checkbox>
+                {{categoria}}
+            </mat-checkbox>
+        </li>
+    </ul>
+</span>
     <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
         <input matInput formControlName="email">
