@@ -10,13 +10,17 @@ import { EmpresaService } from '../services/empresa.service';
   selector: 'app-registro-empresa',
   templateUrl: './registro-empresa.component.html',
   styleUrls: ['./registro-empresa.component.css']
+  
 })
 
 export class RegistroEmpresaComponent implements OnInit {
   form: FormGroup;
   loading = false;
-
   hide = true;
+
+  //Lista de fotos seleccionadas
+  fileList!: FileList;
+  
   
   constructor(private fb: FormBuilder, private _snackBar:MatSnackBar,private router: Router, private empresaService: EmpresaService) {
     this.form = this.fb.group({
@@ -28,7 +32,7 @@ export class RegistroEmpresaComponent implements OnInit {
       enlaceWeb:['', Validators.required],
       email:['', Validators.required],
       cif:['', Validators.required],
-  
+      fotos:[[]]
     })
    }
 
@@ -36,7 +40,7 @@ export class RegistroEmpresaComponent implements OnInit {
   }
 
   ingresar(){
-    console.log(this.form);
+  /*   console.log(this.form);
     const email = this.form.value.email;
     const password = this.form.value.password;
 
@@ -45,8 +49,11 @@ this.fakeLoading();
     }else{
 this.error();
 this.form.reset();
-    }
+    } */
   }
+
+
+
 
   error(){
     this._snackBar.open('Email o contraseña son inválidos','',{
@@ -56,6 +63,7 @@ this.form.reset();
     })
   }
 
+
   fakeLoading(){
     this.loading = true;
     setTimeout(()=>{
@@ -64,14 +72,49 @@ this.form.reset();
     }, 1500);
   }
 
-  add(email:string, cif:string, nombre:string, descripcion:string, telefono:string, direccion:string, enlaceWeb:string): void {
-    // nombre = nombre.trim();
-    // if (!nombre) { return; }
-    this.empresaService.addEmpresa({ email, cif, nombre, descripcion, telefono, direccion, enlaceWeb } as Empresa)
+  /**
+   * 
+   * Método que registra una nueva empresa
+   * 
+   * @param data los datos del formulario
+   * 
+   */
+  add(data:any): void {
+  
+    data.fotos = this.getFiles()
+
+    this.empresaService.addEmpresa(data as Empresa)
       .subscribe(empresa => {
         console.log(empresa);
       });
   }
   
+
+  /**
+   * 
+   * Función que devuelve los nombres de las imágenes subidas
+   * 
+   * @returns array con los nombres de las imágenes
+   * 
+   */
+  getFiles(){
+    var files = []
+    files.push(this.fileList[0].name)
+    files.push(this.fileList[1].name)
+
+    return files
+
+  }
+
+  /**
+   * 
+   * Función que asigna la lista de archivos subidos a la propiedad fileList
+   * 
+   * @param event evento de cambio en el input de fotos
+   * 
+   */
+  selectFiles(event:any) {
+    this.fileList = event.target.files;
+  }
 
 }

@@ -2,7 +2,7 @@
 </mat-spinner>
 <h1 *ngIf="!loading">Registro Empresa</h1>
 
-<form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
+<form *ngIf="!loading" [formGroup]="form" (ngSubmit)="add(form.value)">
 
     <div class="empresa">
         <mat-form-field appearance="outline">
@@ -35,6 +35,8 @@
         <input matInput formControlName="enlaceWeb" #enlaceWeb>
     </mat-form-field>
 
+    <input type="file" formControlName="fotos" class="file-input" multiple (change)="selectFiles($event)">
+
     <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
         <input matInput formControlName="email" #email>
@@ -49,7 +51,7 @@
     </mat-form-field>
 
     <div class="buttons">
-        <button type="submit" class="btnRegistrarse" mat-raised-button (click)="add(email.value,cif.value,nombre.value,descripcion.value,telefono.value,direccion.value,enlaceWeb.value)">Registrarse</button>
+        <button type="submit" class="btnRegistrarse" mat-raised-button type="submit">Registrarse</button>
         <!-- <button type="submit" class="btnRegistrarse" mat-raised-button [disabled]="form.disabled">Registrarse</button> -->
     </div>
 

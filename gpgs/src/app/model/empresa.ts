@@ -1,3 +1,4 @@
+
 export interface Empresa{
     email:string;
     cif:string;
@@ -7,5 +8,5 @@ export interface Empresa{
     direccion:string;
     enlaceWeb:string;
     //categorias:Array<String>;
-    //fotos:Array<String>;
+    fotos:[];
 }
