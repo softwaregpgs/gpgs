@@ -1,0 +1,56 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(29, 191, 212);
+    color: white;
+    font-weight: 600;
+}
+
+.toolbar #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+}
+
+.toolbar #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+}
+
+.toolbar #twitter-logo:hover,
+.toolbar #youtube-logo:hover {
+    opacity: 0.8;
+}
+
+.logo-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(29, 191, 212);
+    ;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.logo-link :active {
+    color: rgb(29, 191, 212);
+}
+
+.btnIniciar {
+    background-color: white;
+    color: rgb(29, 191, 212);
+    margin: 0 16px;
+}

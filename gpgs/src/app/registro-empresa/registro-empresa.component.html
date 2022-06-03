@@ -1,0 +1,69 @@
+<mat-spinner *ngIf="loading" class="spinner" diameter="50">
+</mat-spinner>
+<h1 *ngIf="!loading">Registro Empresa</h1>
+
+<form *ngIf="!loading" [formGroup]="form" (ngSubmit)="add(form.value)">
+
+    <div class="empresa">
+        <mat-form-field appearance="outline">
+            <mat-label>Empresa</mat-label>
+            <input matInput formControlName="nombre">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>CIF</mat-label>
+            <input matInput formControlName="cif">
+        </mat-form-field>
+    </div>
+    <mat-form-field appearance="outline">
+        <mat-label>Teléfono</mat-label>
+        <input matInput formControlName="telefono">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Dirección</mat-label>
+        <input matInput formControlName="direccion">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Descripción</mat-label>
+        <input matInput formControlName="descripcion">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>WEB</mat-label>
+        <input matInput formControlName="enlaceWeb">
+    </mat-form-field>
+
+    <input type="file" formControlName="fotos" class="file-input" multiple (change)="selectFiles($event)">
+
+
+    <span>
+    <p>Tipo de servicio que ofrece tu empresa</p>
+
+    <ul>
+        <li *ngFor="let categoria of categorias">
+            <mat-checkbox>
+                {{categoria}}
+            </mat-checkbox>
+        </li>
+    </ul>
+</span>
+    <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" #password>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+
+    <div class="buttons">
+        <button type="submit" class="btnRegistrarse" mat-raised-button type="submit">Registrarse</button>
+    </div>
+
+</form>
