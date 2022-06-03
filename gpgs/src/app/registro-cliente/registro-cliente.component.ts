@@ -21,6 +21,7 @@ export class RegistroClienteComponent implements OnInit {
       nombre:['', Validators.required],
       apellidos:['', Validators.required],
       email:['', Validators.required],
+      password:['', Validators.required],
     })
    }
 
@@ -31,6 +32,9 @@ export class RegistroClienteComponent implements OnInit {
     console.log(this.form);
     const email = this.form.value.email;
     const password = this.form.value.password;
+
+    console.log(email);
+    console.log(password);
 
     if(email == 'borja' && password == 'gpgs'){
 this.fakeLoading();
@@ -56,10 +60,10 @@ this.form.reset();
     }, 1500);
   }
 
-  add(nombre:string, apellidos:string, email:string): void {
+  add(data:any): void {
     // nombre = nombre.trim();
     // if (!nombre) { return; }
-    this.clienteService.addCliente({ nombre, apellidos, email} as Cliente)
+    this.clienteService.addCliente(data as Cliente)
       .subscribe(cliente => {
         console.log(cliente);
       });

@@ -2,34 +2,34 @@
 </mat-spinner>
 <h1 *ngIf="!loading">Registro Cliente</h1>
 
-<form *ngIf="!loading" [formGroup]="form" (ngSubmit)="ingresar()">
+<form *ngIf="!loading" [formGroup]="form" (ngSubmit)="add(form.value)">
 
 <div class="cliente">
 <mat-form-field appearance="outline">
     <mat-label>Nombre</mat-label>
-    <input matInput formControlName="nombre" #nombre>
+    <input matInput formControlName="nombre">
 </mat-form-field>
 
 <mat-form-field appearance="outline">
     <mat-label>Apellidos</mat-label>
-    <input matInput formControlName="apellidos" #apellidos>
+    <input matInput formControlName="apellidos">
 </mat-form-field>
 </div>
 
 <mat-form-field appearance="outline">
     <mat-label>Email</mat-label>
-    <input matInput formControlName="email" #email>
+    <input matInput formControlName="email">
 </mat-form-field>
 
 <mat-form-field appearance="outline">
     <mat-label>Contraseña</mat-label>
-    <input matInput [type]="hide ? 'password' : 'text'">
+    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
       </button>
 </mat-form-field>
 
 <div class="buttons">
-    <button type="submit" class="btnRegistrarse" mat-raised-button (click)="add(nombre.value,apellidos.value,email.value)">Registrarse</button>
+    <button type="submit" class="btnRegistrarse" mat-raised-button>Registrarse</button>
 </div>
 </form>

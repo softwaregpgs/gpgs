@@ -39,6 +39,9 @@ export class RegistroEmpresaComponent implements OnInit {
     const email = this.form.value.email;
     const password = this.form.value.password;
 
+    console.log(email);
+    console.log(password);
+
     if(email == 'borja' && password == 'gpgs'){
 this.fakeLoading();
     }else{
