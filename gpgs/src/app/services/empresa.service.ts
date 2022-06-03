@@ -11,15 +11,23 @@ export class EmpresaService {
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
+
   private url= 'http://localhost:8080/api/v1/empresas/'
 
   constructor(private http: HttpClient) {
 
    }
 
+   /**
+    * Método que hace una petición POST al backend para añadir una empresa
+    * 
+    * @param empresa 
+    * 
+    * @returns la respuesta del backend, en este caso, la empresa insertada
+    */
   addEmpresa(empresa: Empresa): Observable<Empresa> {
     return this.http.post<Empresa>(this.url, empresa, this.httpOptions).pipe(
-      tap((newEmpresa: Empresa) => console.log(`added hero w/ id=${newEmpresa.nombre}`)),
+      tap((empresaAñadida: Empresa) => console.log(`Empresa añadida: id=${empresaAñadida.cif}`)),
       catchError(this.handleError<Empresa>('addEmpresa'))
     );
   }

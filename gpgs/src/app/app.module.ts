@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RegistroEmpresaComponent } from './registro-empresa/registro-empresa.component';
 import { RegistroClienteComponent } from './registro-cliente/registro-cliente.component';
 import { HomeClienteComponent } from './home-cliente/home-cliente.component';
@@ -45,6 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MatButtonModule,
     MatInputModule,
+    MatCheckboxModule,
     MatMenuModule,
     MatListModule,
     ReactiveFormsModule,

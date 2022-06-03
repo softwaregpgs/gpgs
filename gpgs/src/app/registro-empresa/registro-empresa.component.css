@@ -8,6 +8,10 @@
     margin-top: 40px;
 }
 
+ul {
+    list-style: none;
+}
+
 .empresa {
     display: flex;
     flex-direction: row;
