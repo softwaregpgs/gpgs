@@ -1,0 +1,56 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(29, 191, 212);
+    color: white;
+    font-weight: 600;
+}
+
+.logo-link {
+    height: 70%;
+    width: 3%;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    display: flex;
+    order: 1;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(29, 191, 212);
+    ;
+}
+
+span {
+    order: 2;
+    width: 15%;
+}
+
+input {
+    order: 3;
+    height: 50%;
+    width: 50%;
+    background-color: white;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+
+.logo-link :active {
+    color: rgb(29, 191, 212);
+}
+
+.btnBuscar {
+    background-color: white;
+    color: rgb(29, 191, 212);
+    margin: 0 16px;
+    order: 4;
+}

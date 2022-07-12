@@ -1,0 +1,18 @@
+.lista {
+    display: flex;
+    padding-top: 10%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.elemento {
+    width: 25%;
+    margin: 2%;
+}
+
+button {
+    background-color: rgb(29, 191, 212);
+    color: white;
+    font-size: small;
+    width: 100px;
+}

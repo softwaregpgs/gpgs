@@ -24,6 +24,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HttpClientModule } from '@angular/common/http';
+import { ListaEmpresasComponent } from './lista-empresas/lista-empresas.component';
+import { MatCardModule} from '@angular/material/card';
+import { Navbar2Component } from './navbar2/navbar2.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeClienteComponent,
     HomeEmpresaComponent,
     PoliticaPrivacidadComponent,
+    ListaEmpresasComponent,
+    Navbar2Component,
   
   ],
   imports: [
@@ -49,6 +54,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatCheckboxModule,
     MatMenuModule,
     MatListModule,
+    MatCardModule,
     ReactiveFormsModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
@@ -61,6 +67,7 @@ import { HttpClientModule } from '@angular/common/http';
       { path: 'login/registroEmpresa/homeEmpresa', component: HomeEmpresaComponent },
       { path: '', component: HomeComponent },
       { path: 'politicaPrivacidad', component: PoliticaPrivacidadComponent },
+      { path: 'empresas', component: ListaEmpresasComponent},
     ])
   ],
   providers: [],
