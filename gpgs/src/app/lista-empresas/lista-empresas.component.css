@@ -1,18 +1,36 @@
-.lista {
-    display: flex;
-    padding-top: 10%;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.elemento {
-    width: 25%;
-    margin: 2%;
-}
-
-button {
-    background-color: rgb(29, 191, 212);
-    color: white;
-    font-size: small;
-    width: 100px;
-}
+            .lista {
+                display: flex;
+                padding-top: 10%;
+                flex-wrap: wrap;
+                align-items: center;
+            }
+            
+            .contenedor-lista {
+                align-items: center;
+            }
+            
+            .elemento {
+                width: 25%;
+                margin: 4%;
+            }
+            
+            button {
+                background-color: rgb(29, 191, 212);
+                color: white;
+                font-size: small;
+                width: 100px;
+            }
+            
+            @media (max-width: 600px) {
+                .elemento {
+                    width: 100%;
+                    margin: 2%;
+                }
+            }
+            
+            @media (max-width: 1024px) {
+                .elemento {
+                    width: 30%;
+                    margin: 2%;
+                }
+            }

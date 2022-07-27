@@ -10,13 +10,14 @@
     background-color: rgb(29, 191, 212);
     color: white;
     font-weight: 600;
+    order: 2;
 }
 
 .logo-link {
     height: 70%;
     width: 3%;
     border-radius: 40px;
-    margin: 8px;
+    margin: 1%;
     background-color: white;
     display: flex;
     order: 1;
